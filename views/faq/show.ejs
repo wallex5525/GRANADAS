@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Duvidas</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Duvida</h1>
+    </header>
+
+    <section>
+        <form action="/duvida/<%- id %>?_method=delete" method="post">
+            <label>Duvida: <%- faq.faq %></label>
+            <ul>
+                <li>
+                    <button class="BotaoPostar" type="submit">excluir</button>
+                </li>
+                <li>
+                    <a href="/duvida/<%-id%>/editar">editar</a>
+                </li>
+            </ul>
+
+        </form>
+    </section>
+
+
+    <footer>
+        <small>PWeb2 - Trabalho</small>
+    </footer>
+</body>
+
+</html>

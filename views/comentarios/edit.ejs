@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Comentarios</h1>
+    </header>
+
+    <section>
+        <form action="/comentario/<%- id %>?_method=put" method="post">
+            <label>Comentario</label>
+            <input type="text" name="comentario[comentario]" value="<%- comentario.comentario %>" />
+            <button type="submit">atualizar</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <small>PWeb2 - Trabalho</small>
+    </footer>
+</body>
+
+</html>

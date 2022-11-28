@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dust 2</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Smoke Dust 2</h1>
+    </header>
+    <h2>Smoke caixa gorda</h2>
+    <img src="/images/dust2/caixaGorda.gif" width="854" height="480">
+    <img src="/images/dust2/caixaGorda.png" width="854" , height="480">
+    <script>
+        function darNota(a) {
+            if (a == 1 || a == '1') {
+                document.getElementById("1").src = "/images/starv.png";
+                document.getElementById("2").src = "/images/star.png";
+                document.getElementById("3").src = "/images/star.png";
+                document.getElementById("4").src = "/images/star.png";
+                document.getElementById("5").src = "/images/star.png";
+            } else if (a == 2 || a == '2') {
+                document.getElementById("1").src = "/images/starv.png";
+                document.getElementById("2").src = "/images/starv.png";
+                document.getElementById("3").src = "/images/star.png";
+                document.getElementById("4").src = "/images/star.png";
+                document.getElementById("5").src = "/images/star.png";
+            } else if (a == 3 || a == '3') {
+                document.getElementById("1").src = "/images/starv.png";
+                document.getElementById("2").src = "/images/starv.png";
+                document.getElementById("3").src = "/images/starv.png";
+                document.getElementById("4").src = "/images/star.png";
+                document.getElementById("5").src = "/images/star.png";
+            } else if (a == 4 || a == '4') {
+                document.getElementById("1").src = "/images/starv.png";
+                document.getElementById("2").src = "/images/starv.png";
+                document.getElementById("3").src = "/images/starv.png";
+                document.getElementById("4").src = "/images/starv.png";
+                document.getElementById("5").src = "/images/star.png";
+            } else if (a == 5 || a == '5') {
+                document.getElementById("1").src = "/images/starv.png";
+                document.getElementById("2").src = "/images/starv.png";
+                document.getElementById("3").src = "/images/starv.png";
+                document.getElementById("4").src = "/images/starv.png";
+                document.getElementById("5").src = "/images/starv.png";
+            }
+        }
+        function darNota2(a) {
+            if (a == 1 || a == '1') {
+                document.getElementById("a").src = "/images/starv.png";
+                document.getElementById("b").src = "/images/star.png";
+                document.getElementById("c").src = "/images/star.png";
+                document.getElementById("d").src = "/images/star.png";
+                document.getElementById("e").src = "/images/star.png";
+                document.getElementById("botao").value = "1";
+            } else if (a == 2 || a == '2') {
+                document.getElementById("a").src = "/images/starv.png";
+                document.getElementById("b").src = "/images/starv.png";
+                document.getElementById("c").src = "/images/star.png";
+                document.getElementById("d").src = "/images/star.png";
+                document.getElementById("e").src = "/images/star.png";
+                document.getElementById("botao").value = "2";
+            } else if (a == 3 || a == '3') {
+                document.getElementById("a").src = "/images/starv.png";
+                document.getElementById("b").src = "/images/starv.png";
+                document.getElementById("c").src = "/images/starv.png";
+                document.getElementById("d").src = "/images/star.png";
+                document.getElementById("e").src = "/images/star.png";
+                document.getElementById("botao").value = "3";
+            } else if (a == 4 || a == '4') {
+                document.getElementById("a").src = "/images/starv.png";
+                document.getElementById("b").src = "/images/starv.png";
+                document.getElementById("c").src = "/images/starv.png";
+                document.getElementById("d").src = "/images/starv.png";
+                document.getElementById("e").src = "/images/star.png";
+                document.getElementById("botao").value = "4";
+            } else if (a == 5 || a == '5') {
+                document.getElementById("a").src = "/images/starv.png";
+                document.getElementById("b").src = "/images/starv.png";
+                document.getElementById("c").src = "/images/starv.png";
+                document.getElementById("d").src = "/images/starv.png";
+                document.getElementById("e").src = "/images/starv.png";
+                document.getElementById("botao").value = "5";
+            }
+        }
+    </script>
+    <section>
+        <form action="/nota" method="post">
+            <img src="/images/star.png" id="a" onclick="darNota2(1)" width="25" height="25">
+            <img src="/images/star.png" id="b" onclick="darNota2(2)" width="25" height="25">
+            <img src="/images/star.png" id="c" onclick="darNota2(3)" width="25" height="25">
+            <img src="/images/star.png" id="d" onclick="darNota2(4)" width="25" height="25">
+            <img src="/images/star.png" id="e" onclick="darNota2(5)" width="25" height="25">
+            <button id="botao" name="nota[nota]" type="submit">postar</button>
+        </form>
+        <table>
+            <tbody>
+                <% nota.forEach(function(nota, index) { %>
+                    <tr>
+                        <td>
+
+                            <img src="/images/star.png" id="1" width="25" height="25">
+                            <img src="/images/star.png" id="2" width="25" height="25">
+                            <img src="/images/star.png" id="3" width="25" height="25">
+                            <img src="/images/star.png" id="4" width="25" height="25">
+                            <img src="/images/star.png" id="5" width="25" height="25">
+                            <script>
+                                darNota('<%- nota.nota %>')
+                            </script>
+
+                        </td>
+                        <td>
+                            <a href="/nota/<%- index %>">Detalhes</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>Smoke meio (base CT)</h2>
+
+    <img src="/images/dust2/meioCt.gif" width="854" , height="480">
+    <img src="/images/dust2/meioCt.png" width="854" , height="480">
+
+
+    <section>
+        <form action="/criar" method="post">
+            <input type="text" name="comentario[comentario]" placeholder="Comentario" />
+            <button type="submit">postar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Comentarios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% comentarios.forEach(function(comentario, index) { %>
+                    <tr>
+                        <td>
+                            <%- usuario.nome %>
+                        </td>
+                        <td>
+                            <%- comentario.comentario %>
+                        </td>
+                        <td>
+                            <a href="/comentario/<%- index %>">Detalhes</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </section>
+
+
+    <a class="botao" href="/duvidas" method="get">?</a>
+
+    <footer class="footer">
+        <small>SEM FOOTER AINDA</small>
+    </footer>
+</body>
+
+</html>

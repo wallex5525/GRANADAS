@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dust 2</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+
+
+    <section>
+
+        <form action="/createfaq" method="post">
+            <ul>
+                <li>
+                    <input type="text" name="faq[faq]" placeholder="Duvida" type="submit" />
+
+                </li>
+                <li>
+                    <button class="BotaoPostar" type="submit"> Postar Duvida</button> 
+                </li>
+            </ul>
+
+        </form>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Duvidas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% duvidas.forEach(function(duvida, index) { %>
+                    <tr>
+                        <td>
+                            <%- usuario.nome %>
+                        </td>
+                        <td>
+                            <%- duvida.faq %>
+                        </td>
+                        <td>
+                            <a href="/duvida/<%- index %>">Detalhes</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="footer">
+        <small>SEM FOOTER AINDA</small>
+    </footer>
+</body>
+
+</html>
