@@ -7,7 +7,13 @@ let path = require("path");
 let methodOverride = require("method-override");
 let app = express();
 let error = require("./middlewares/error");
+const KEY = 'pweb.agenda.sid'; //#!
+const SECRET = 'super_secreto!'; //#!
+let cookie = cookieParser(SECRET); //#!
+let store = new expressSession.MemoryStore(); //#!
+let mongoose = require('mongoose'); //#!
 
+global.db = mongoose.connect('mongodb://127.0.0.1:27017/granadas');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -25,6 +31,6 @@ load('models')
 
   
 //codigo acrescentado
-app.listen(3001, function (){
+app.listen(3001, ()=>{
   console.log("servidor rodando")
 });

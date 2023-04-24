@@ -1,4 +1,6 @@
 module.exports = function (app) {
+    let mapa = app.models.mapa; //# <<
+
     var CRUDnota = {
         show: function (req, res) {
             var id = req.params.id,
