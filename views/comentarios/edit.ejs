@@ -13,7 +13,7 @@
     </header>
 
     <section>
-        <form action="/comentario/<%- id %>?_method=put" method="post">
+        <form action="/comentario/<%- nome_usuario %>/<%- id %>?_method=put" method="post">
             <label>Comentario</label>
             <input type="text" name="comentario[comentario]" value="<%- comentario.comentario %>" />
             <button type="submit">atualizar</button>

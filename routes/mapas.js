@@ -7,8 +7,8 @@ module.exports = function (app) {
     app.get("/vertigo", autenticar, app.controllers.mapas.vertigo);
 
     app.post("/criar", app.controllers.CRUDcomentario.creat);
-    app.get("/comentario/:id", app.controllers.CRUDcomentario.show);
-    app.get("/comentario/:id/editar", app.controllers.CRUDcomentario.edit);
-    app.put("/comentario/:id", app.controllers.CRUDcomentario.update);
-    app.delete("/comentario/:id", app.controllers.CRUDcomentario.destroy);
+    app.get("/comentario/:nome_usuario/:id", app.controllers.CRUDcomentario.show);
+    app.get("/comentario/:nome_usuario/:id/editar", app.controllers.CRUDcomentario.edit);
+    app.put("/comentario/:nome_usuario/:id", app.controllers.CRUDcomentario.update);
+    app.delete("/comentario/:nome_usuario/:id", app.controllers.CRUDcomentario.destroy);
 }

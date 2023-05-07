@@ -7,11 +7,11 @@ let path = require("path");
 let methodOverride = require("method-override");
 let app = express();
 let error = require("./middlewares/error");
-const KEY = 'pweb.agenda.sid'; //#!
-const SECRET = 'super_secreto!'; //#!
-let cookie = cookieParser(SECRET); //#!
-let store = new expressSession.MemoryStore(); //#!
-let mongoose = require('mongoose'); //#!
+const KEY = 'pweb.agenda.sid';
+const SECRET = 'super_secreto!'; 
+let cookie = cookieParser(SECRET); 
+let store = new expressSession.MemoryStore();
+let mongoose = require('mongoose'); 
 
 global.db = mongoose.connect('mongodb://127.0.0.1:27017/granadas');
 
@@ -24,13 +24,8 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(express.static(path.join(__dirname, 'public')));
 
-load('models')
-  .then('controllers')
-  .then('routes')
-  .into(app);
-
+load('models').then('controllers').then('routes').into(app);
   
-//codigo acrescentado
-app.listen(3001, ()=>{
+app.listen(3000, ()=>{
   console.log("servidor rodando")
 });

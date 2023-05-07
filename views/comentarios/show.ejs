@@ -13,12 +13,12 @@
     </header>
 
     <section>
-        <form action="/comentario/<%- id %>?_method=delete" method="post">
+        <form action="/comentario/<%- nome_usuario %>/<%- id %>?_method=delete" method="post">
             <label>Comentario</label>
             <p>
                 <label><%- comentario.comentario %></label>
                 <button type="submit">excluir</button>
-                <a href="/comentario/<%-id%>/editar">editar</a>
+                <a href="/comentario/<%- nome_usuario %>/<%-id%>/editar">editar</a>
             </p>
 
         </form>

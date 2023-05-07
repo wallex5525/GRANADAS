@@ -7,10 +7,10 @@ module.exports = function (app) {
             let comentarios = [];
 
             await Mapa.findOne({ nome_mapa: nome_mapa })
-                .then(mapa => {
+                .then(async (mapa) => {
                     if (!mapa) {
                         const MAPA = new Mapa({ nome_mapa: nome_mapa, granadas: [], comentarios: [] })
-                        MAPA.save()
+                        await MAPA.save()
                             .then(console.log("funfou"))
                             .catch((err) => console.log(err))
                     } else {
@@ -26,7 +26,7 @@ module.exports = function (app) {
                 nota = usuario.nota;
             
             let params = { usuario: usuario, comentarios: comentarios, nota: nota };
-            console.log(params)
+            //console.log(params)
             res.render("dust2/index", params);
         },
         inferno: function (req, res) {
